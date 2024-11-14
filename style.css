@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Poppins,sans-serif;
+    background-color: hsl(0, 0%, 98%);
+}
+header{
+    margin: auto;
+    width: 34em;
+    text-align: center;
+    padding: 5em 0 0 0;
+}
+.title-1{
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+    font-size: 38px;
+}
+.title-2{
+    font-weight: 600;
+    color: hsl(234, 12%, 34%); 
+    font-size: 38px;
+}
+.description{
+    color: hsl(229, 6%, 66%);
+    margin: 15px 0 3em 0;
+}
+
+#cards{
+    display: grid;
+    width: 75em;
+    margin: auto;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(2,1fr);
+    column-gap: 2em;
+    row-gap: 2em;
+    padding: 20px;
+}
+.supervisor,.team-builder,.karma,.calculator{
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    height:12em;
+    border-radius: 7px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.192);
+    position: relative;
+}
+.supervisor,.calculator{
+    position: relative;
+    top: 75%;
+}
+.supervisor{
+ border-top:5px solid hsl(180, 62%, 55%);
+
+}
+.team-builder{
+    border-top:5px solid hsl(0, 78%, 62%);
+}
+.karma{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    border-top:5px solid hsl(34, 97%, 64%);
+}
+.calculator{
+    border-top:5px solid hsl(212, 86%, 64%);
+}
+#cards svg{
+    position: absolute;
+    bottom:30px;
+    right:30px;
+}
+#cards h1{
+    color: hsl(234, 12%, 34%);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#cards p{
+  color:hsl(229, 6%, 66%);
+  font-size: 13px;
+  padding-right: 20px;
+  line-height: 25px;
+}
+
+@media (max-width:1024px){
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        width: 20em;
+    }
+    .title-1,.title-2{
+        font-size: 25px;
+    }
+
+    #cards{
+        display: grid;
+        grid-template-rows:repeat(4,1fr);
+        grid-template-columns: repeat(1,1fr);
+        width: 20em;
+    } 
+    .supervisor{
+        grid-row:1/2;
+        grid-column:1;
+        position: relative;
+        top: 0;
+
+    }
+    .team-builder{
+        grid-row:2/5;
+        grid-column:1;
+    }
+    .karma{
+        grid-row:3/5;
+        grid-column:1;
+    }
+    .calculator{
+        grid-row:4/5;
+        grid-column:1;
+        position: relative;
+        top: 0;
+    }   
+}
